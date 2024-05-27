@@ -1,1 +1,4 @@
 bin/
+blueprints/
+tmp/
+tmp/*
