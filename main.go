@@ -10,6 +10,8 @@ func main() {
 	router := echo.New()
 
 	router.GET("/", handlers.IndexHandler)
+	router.GET("/archive", handlers.ArchiveHandler)
+	router.GET("/resume.pdf", handlers.ResumePDFHandler)
 
 	router.Logger.Fatal(router.Start("localhost:3000"))
 }
