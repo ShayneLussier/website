@@ -2,3 +2,5 @@ bin/
 blueprints/
 tmp/
 tmp/*
+
+templates/projects/example-project.html
