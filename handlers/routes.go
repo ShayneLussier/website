@@ -3,7 +3,7 @@ package handlers
 import (
 	"path/filepath"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 // Register all routes
@@ -16,16 +16,16 @@ func RegisterRoutes(e *echo.Echo) {
 
 func RegisterProjectRoutes(e *echo.Echo, basePath string) {
 	e.GET(basePath+"/tennis-streaming", TennisStreamingProjectHandler)
-	e.GET(basePath+"/example-project", ExampleProjectHandler)
 	// e.Get(basePath+"/new-project", NewProjectHandler)
+	e.GET(basePath+"/example-project", ExampleProjectHandler)
 }
 
 func IndexHandler(ctx echo.Context) error {
-	return ctx.File("templates/html/index.html")
+	return ctx.File("templates/index.html")
 }
 
 func ArchiveHandler(ctx echo.Context) error {
-	return ctx.File("templates/html/archive.html")
+	return ctx.File("templates/archive.html")
 }
 
 func ResumePDFHandler(c echo.Context) error {
@@ -36,9 +36,10 @@ func ResumePDFHandler(c echo.Context) error {
 }
 
 func TennisStreamingProjectHandler(ctx echo.Context) error {
-	return ctx.File("templates/html/projects/tennis-streaming.html")
+	return ctx.File("templates/projects/tennis/tennis-streaming.html")
 }
 
+// Example
 func ExampleProjectHandler(ctx echo.Context) error {
-	return ctx.File("templates/html/projects/example-project.html")
+	return ctx.File("templates/projects/project-example/example-project.html")
 }
