@@ -9,15 +9,15 @@ import (
 func main() {
 	router := echo.New()
 
+	// Define static file directory
+	router.Static("/", "static")
+
 	// Register Routes
 	handlers.RegisterRoutes(router)
 	// Register Project Routes
 	handlers.RegisterProjectRoutes(router, "/projects")
 	//Register Script Routes
 	handlers.RegisterScripts(router)
-
-	// Define static file directory
-	router.Static("/", "static")
 
 	router.Logger.Fatal(router.Start("localhost:3000"))
 }
