@@ -3,7 +3,7 @@ package main
 import (
 	"website/handlers"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 func main() {
@@ -13,6 +13,11 @@ func main() {
 	handlers.RegisterRoutes(router)
 	// Register Project Routes
 	handlers.RegisterProjectRoutes(router, "/projects")
+	//Register Script Routes
+	handlers.RegisterScripts(router)
+
+	// Define static file directory
+	router.Static("/", "static")
 
 	router.Logger.Fatal(router.Start("localhost:3000"))
 }
