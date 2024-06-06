@@ -1,6 +1,8 @@
 bin/
 blueprints/
 tmp/
-templates/html/projects
+templates/projects/
 handlers/scripts.go
 scripts/
+common/
+images/
