@@ -19,5 +19,5 @@ func main() {
 	//Register Script Routes
 	handlers.RegisterScripts(router)
 
-	router.Logger.Fatal(router.Start("localhost:3000"))
+	router.Logger.Fatal(router.Start("localhost:8080"))
 }
