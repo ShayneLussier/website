@@ -1,0 +1,28 @@
+# Ignore the source files
+*.go
+
+common/
+handlers/
+scripts/
+
+tmp/
+
+# Ignore Tailwind config since project is compiled outside of container
+tailwind.config.js
+
+# Same for these...
+go.mod
+go.sum
+
+.env
+
+*.test.*
+*_test.go
+
+*.toml
+
+.gitignore
+
+# Ignore Dockerfile and dockerignore file itself
+Dockerfile
+.dockerignore
