@@ -5,3 +5,5 @@ templates/projects/
 handlers/scripts.go
 scripts/
 common/
+
+main
