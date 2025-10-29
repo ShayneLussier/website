@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Achievements | Shayne Lussier{% endblock %}
+
+{% block head %}
+<!-- Navigation Active State Styles -->
+<style>
+    .nav a.active .nav-indicator {
+        width: 4rem;
+        background-color: #f1f5f9;
+    }
+
+    .nav a.active .nav-text {
+        color: #f1f5f9;
+    }
+
+    /* Improved table spacing */
+    table#content {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    table#content th,
+    table#content td {
+        padding-right: 2.5rem; /* adds more space between columns */
+        vertical-align: middle; /* keeps everything centered */
+    }
+
+    /* Adjusted column widths for better balance */
+    table#content th:nth-child(1),
+    table#content td:nth-child(1) {
+        width: 10%;  /* Year */
+    }
+
+    table#content th:nth-child(2),
+    table#content td:nth-child(2) {
+        width: 20%;  /* Made at (reduced from 25%) */
+    }
+
+    table#content th:nth-child(3),
+    table#content td:nth-child(3) {
+        width: 20%;  /* Project (reduced from 25%) */
+    }
+
+    table#content th:nth-child(4),
+    table#content td:nth-child(4) {
+        width: 50%;  /* Description (increased from 40%) */
+    }
+</style>
+{% endblock head%}
+
+{% block content %}
+<body class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+    <div class="min-h-screen font-sans py-12 md:py-20 lg:py-24" style="width: min(80%, 1280px); margin: 0 auto; padding: 0 1.5rem;">
+        <a href="#content" class="absolute left-0 top-0 block -translate-x-full rounded bg-gradient-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Skip to Content</a>
+        <div class="lg:py-24">
+            <a class="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300 hover:text-teal-200" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
+                </svg>
+                Shayne Lussier
+            </a>
+
+            <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">Notable Achievements</h1>
+            <table id="content" class="mt-12 w-full border-collapse text-left">
+                <thead class="sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur">
+                    <tr>
+                        <th class="py-4 pr-8 text-sm font-semibold text-slate-200">Year</th>
+                        <th class="py-4 pr-8 text-sm font-semibold text-slate-200">Made at</th>
+                        <th class="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">Project</th>
+                        <th class="hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Back in Stock -->
+                    <tr class="border-b border-slate-300/10 last:border-none">
+                        <td class="py-4 pr-4 align-middle text-sm">
+                            <div class="translate-y-px">2025</div>
+                        </td>
+                        <td class="py-4 pr-4 align-middle font-semibold leading-snug text-slate-200">
+                            <div class="hidden sm:block">JAMP Pharma</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle font-semibold leading-snug text-slate-200 lg:table-cell">
+                            <div class="translate-y-px whitespace-nowrap">Back in Stock emails</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle lg:table-cell">
+                            <p class="font-normal text-slate-200 leading-relaxed">
+                                Automated the distribution of “back-in-stock” emails to over 15,000 pharmacies.
+                                Each message was dynamically generated based on the pharmacy’s historical purchases
+                                to highlight products with the highest conversion potential.
+                            </p>
+                            <a href="{% static 'email.html' %}" target="_blank"
+                            class="mt-2 inline-flex items-center font-medium text-teal-300 hover:text-teal-200">
+                                View example
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Profitability -->
+                    <tr class="border-b border-slate-300/10 last:border-none">
+                        <td class="py-4 pr-4 align-middle text-sm">
+                            <div class="translate-y-px">2025</div>
+                        </td>
+                        <td class="py-4 pr-4 align-middle font-semibold leading-snug text-slate-200">
+                            <div class="hidden sm:block">JAMP Pharma</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle font-semibold leading-snug text-slate-200 lg:table-cell">
+                            <div class="translate-y-px whitespace-nowrap">Profitability Initiative</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle lg:table-cell">
+                            <p class="font-normal text-slate-200 leading-relaxed">
+                                Designed and implemented a project tracking framework for a professional allowance reduction initiative,
+                                resulting in measurable savings of over $610K to date and a projected annual savings of $1.48M.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Data Model Optimization -->
+                    <tr class="border-b border-slate-300/10 last:border-none">
+                        <td class="py-4 pr-4 align-middle text-sm">
+                            <div class="translate-y-px">2024</div>
+                        </td>
+                        <td class="py-4 pr-4 align-middle font-semibold leading-snug text-slate-200">
+                            <div class="hidden sm:block">JAMP Pharma</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle font-semibold leading-snug text-slate-200 lg:table-cell">
+                            <div class="translate-y-px whitespace-nowrap">Data Model Optimization</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle lg:table-cell">
+                            <p class="font-normal text-slate-200 leading-relaxed">
+                                Redesigned large-scale dimension tables by implementing proper data modeling principles such as normalization up to the Boyce-Codd Normal Form (BCNF).
+                                This optimization reduced table size by up to 11× in extreme cases, significantly improving query performance and storage efficiency.
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Workforce Database -->
+                    <tr class="border-b border-slate-300/10 last:border-none">
+                        <td class="py-4 pr-4 align-middle text-sm">
+                            <div class="translate-y-px">2023</div>
+                        </td>
+                        <td class="py-4 pr-4 align-middle font-semibold leading-snug text-slate-200">
+                            <div class="hidden sm:block">L3HARRIS</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle font-semibold leading-snug text-slate-200 lg:table-cell">
+                            <div class="translate-y-px whitespace-nowrap">Workforce Database</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle lg:table-cell">
+                            <p class="font-normal text-slate-200 leading-relaxed">
+                                Developed a centralized database of field mechanics, detailing their skill sets and projected years until retirement.
+                                This initiative allowed HR identify at-risk expertise areas and strategically target recruitment efforts for future workforce needs.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+{% endblock content %}

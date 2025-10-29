@@ -1,28 +1,24 @@
-# Ignore the source files
-*.go
+# Python
+__pycache__
 
-common/
-handlers/
-scripts/
+# Django
+*.log
+db.sqlite3
 
-tmp/
-
-# Ignore Tailwind config since project is compiled outside of container
-tailwind.config.js
-
-# Same for these...
-go.mod
-go.sum
-
+# Environment variables
 .env
+.env.yaml
 
-*.test.*
-*_test.go
-
-*.toml
-
+# Git
+.git/
 .gitignore
 
-# Ignore Dockerfile and dockerignore file itself
+# Docker
 Dockerfile
+docker-compose.yml
 .dockerignore
+
+node_modules/
+src/
+package.json
+package-lock.json

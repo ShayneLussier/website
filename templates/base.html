@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Shayne Lussier is a BI Analayst who helps businesses derive insights from their data to support business decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shayne Lussier - BI Analayst">
+    <meta property="og:description" content="Shayne Lussier is a data engineer who helps businesses derive insights from their data to support business decisions.">
+    <meta property="og:url" content="https://shaynelussier.com/">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    {% block head %}{%  endblock head %}
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    {% block content %}{% endblock content %}
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+</body>
+</html>

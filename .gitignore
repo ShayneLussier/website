@@ -1,9 +1,9 @@
-bin/
-blueprints/
-tmp/
-templates/projects/
-handlers/scripts.go
-scripts/
-common/
+.env
+.env.yaml
 
-main
+node_modules/
+db.sqlite3
+
+__pycache__/
+
+deploy.sh
