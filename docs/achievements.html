@@ -1,61 +1,73 @@
-{% extends "base.html" %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}Achievements | Shayne Lussier{% endblock %}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
 
-{% block head %}
-<!-- Navigation Active State Styles -->
-<style>
-    .nav a.active .nav-indicator {
-        width: 4rem;
-        background-color: #f1f5f9;
-    }
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Shayne Lussier is a BI Analyst who helps businesses derive insights from their data to support business decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Achievements | Shayne Lussier">
+    <meta property="og:description" content="Notable achievements by Shayne Lussier, BI Analyst.">
+    <meta property="og:url" content="https://shaynelussier.com/achievements/">
 
-    .nav a.active .nav-text {
-        color: #f1f5f9;
-    }
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="static/css/output.css">
 
-    /* Improved table spacing */
-    table#content {
-        table-layout: fixed;
-        width: 100%;
-    }
+    <!-- Navigation Active State Styles -->
+    <style>
+        .nav a.active .nav-indicator {
+            width: 4rem;
+            background-color: #f1f5f9;
+        }
 
-    table#content th,
-    table#content td {
-        padding-right: 2.5rem; /* adds more space between columns */
-        vertical-align: middle; /* keeps everything centered */
-    }
+        .nav a.active .nav-text {
+            color: #f1f5f9;
+        }
 
-    /* Adjusted column widths for better balance */
-    table#content th:nth-child(1),
-    table#content td:nth-child(1) {
-        width: 10%;  /* Year */
-    }
+        table#content {
+            table-layout: fixed;
+            width: 100%;
+        }
 
-    table#content th:nth-child(2),
-    table#content td:nth-child(2) {
-        width: 20%;  /* Made at (reduced from 25%) */
-    }
+        table#content th,
+        table#content td {
+            padding-right: 2.5rem;
+            vertical-align: middle;
+        }
 
-    table#content th:nth-child(3),
-    table#content td:nth-child(3) {
-        width: 20%;  /* Project (reduced from 25%) */
-    }
+        table#content th:nth-child(1),
+        table#content td:nth-child(1) {
+            width: 10%;
+        }
 
-    table#content th:nth-child(4),
-    table#content td:nth-child(4) {
-        width: 50%;  /* Description (increased from 40%) */
-    }
-</style>
-{% endblock head%}
+        table#content th:nth-child(2),
+        table#content td:nth-child(2) {
+            width: 20%;
+        }
 
-{% block content %}
+        table#content th:nth-child(3),
+        table#content td:nth-child(3) {
+            width: 20%;
+        }
+
+        table#content th:nth-child(4),
+        table#content td:nth-child(4) {
+            width: 50%;
+        }
+    </style>
+
+    <title>Achievements | Shayne Lussier</title>
+</head>
 <body class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
     <div class="min-h-screen font-sans py-12 md:py-20 lg:py-24" style="width: min(80%, 1280px); margin: 0 auto; padding: 0 1.5rem;">
         <a href="#content" class="absolute left-0 top-0 block -translate-x-full rounded bg-gradient-to-br from-teal-400 via-blue-500 to-purple-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0">Skip to Content</a>
         <div class="lg:py-24">
-            <a class="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300 hover:text-teal-200" href="/">
+            <a class="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300 hover:text-teal-200" href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2" aria-hidden="true">
                     <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"></path>
                 </svg>
@@ -73,6 +85,25 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- VIAJAMP -->
+                    <tr class="border-b border-slate-300/10 last:border-none">
+                        <td class="py-4 pr-4 align-middle text-sm">
+                            <div class="translate-y-px">2026</div>
+                        </td>
+                        <td class="py-4 pr-4 align-middle font-semibold leading-snug text-slate-200">
+                            <div class="hidden sm:block">JAMP Pharma</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle font-semibold leading-snug text-slate-200 lg:table-cell">
+                            <div class="translate-y-px whitespace-nowrap">VIAJAMP</div>
+                        </td>
+                        <td class="hidden py-4 pr-4 align-middle lg:table-cell">
+                            <p class="font-normal text-slate-200 leading-relaxed">
+                                Customer-facing ordering portal enabling Canadian pharmacies to place direct orders for
+                                JAMP Pharma products, with internal system integration providing sales representatives
+                                tools to identify upsell opportunities and efficiently manage near-expiry inventory.
+                            </p>
+                        </td>
+                    </tr>
                     <!-- Back in Stock -->
                     <tr class="border-b border-slate-300/10 last:border-none">
                         <td class="py-4 pr-4 align-middle text-sm">
@@ -86,11 +117,11 @@
                         </td>
                         <td class="hidden py-4 pr-4 align-middle lg:table-cell">
                             <p class="font-normal text-slate-200 leading-relaxed">
-                                Automated the distribution of “back-in-stock” emails to over 15,000 pharmacies.
-                                Each message was dynamically generated based on the pharmacy’s historical purchases
+                                Automated the distribution of "back-in-stock" emails to over 15,000 pharmacies.
+                                Each message was dynamically generated based on the pharmacy's historical purchases
                                 to highlight products with the highest conversion potential.
                             </p>
-                            <a href="{% static 'email.html' %}" target="_blank"
+                            <a href="static/email.html" target="_blank"
                             class="mt-2 inline-flex items-center font-medium text-teal-300 hover:text-teal-200">
                                 View example
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -117,7 +148,7 @@
                         <td class="hidden py-4 pr-4 align-middle lg:table-cell">
                             <p class="font-normal text-slate-200 leading-relaxed">
                                 Designed and implemented a project tracking framework for a professional allowance reduction initiative,
-                                resulting in measurable savings of over $610K to date and a projected annual savings of $1.48M.
+                                resulting in measurable savings of over $1.97M in the fiscal year.
                             </p>
                         </td>
                     </tr>
@@ -140,6 +171,7 @@
                             </p>
                         </td>
                     </tr>
+
                     <!-- Workforce Database -->
                     <tr class="border-b border-slate-300/10 last:border-none">
                         <td class="py-4 pr-4 align-middle text-sm">
@@ -162,5 +194,8 @@
             </table>
         </div>
     </div>
+
+    <!-- Libraries -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </body>
-{% endblock content %}
+</html>
